@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main id="main-content">
+      <main id="main-content" className="space-y-24">
         <HeroSection />
         <FeaturesSection />
         <LiveChatDemo />

@@ -42,7 +42,7 @@ body {
 }
 
 .section-card {
-  @apply bg-slate-900 border border-slate-800 rounded-2xl p-8 transition hover:border-purple-500;
+  @apply bg-slate-900 border border-slate-800 rounded-2xl p-10 lg:p-12 transition hover:border-purple-500;
 }
 
 /* ── Scrollbar ─────────────────────────────── */

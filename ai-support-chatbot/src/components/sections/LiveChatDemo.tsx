@@ -85,7 +85,11 @@ export default function LiveChatDemo() {
   const scrollDown = useCallback(() =>
     endRef.current?.scrollIntoView({ behavior: "smooth" }), []);
 
-  useEffect(() => { scrollDown(); }, [messages, isTyping, scrollDown]);
+  useEffect(() => {
+    if (messages.length > 1) {
+      scrollDown();
+    }
+  }, [messages, scrollDown]);
 
   const send = useCallback(async (text: string) => {
     if (!text.trim() || isTyping) return;
