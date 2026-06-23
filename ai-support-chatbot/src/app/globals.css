@@ -42,7 +42,7 @@ body {
 }
 
 .section-card {
-  @apply bg-slate-900 border border-slate-800 rounded-2xl p-10 lg:p-12 transition hover:border-purple-500;
+  @apply bg-slate-900 border border-slate-800 rounded-2xl py-20 px-6 lg:px-12 transition hover:border-purple-500;
 }
 
 /* ── Scrollbar ─────────────────────────────── */
@@ -151,6 +151,9 @@ body {
 
 /* ── Section rhythm ────────────────────────── */
 section { position: relative; }
+
+/* Increase spacing between stacked sections */
+section + section { margin-top: 4rem; }
 
 /* ── Focus ring ─────────────────────────────  */
 :focus-visible {

@@ -78,7 +78,7 @@ export default function HeroSection() {
             </div>
 
             {/* Headline */}
-            <h1 className="text-5xl font-bold tracking-tight leading-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500 mb-6">
+            <h1 className="text-6xl font-bold tracking-tight leading-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500 mb-6">
               AI Business Assistant
             </h1>
 
