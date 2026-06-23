@@ -14,9 +14,9 @@ const statCards = [
 
 export default function BenefitsSection() {
   return (
-    <section className="py-28 bg-white dark:bg-slate-950" aria-labelledby="benefits-heading">
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 xl:gap-24 items-center">
+    <section className="py-20 bg-slate-950" aria-labelledby="benefits-heading">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 section-card">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-16 items-center">
 
           {/* ── Left ─────────────────────────── */}
           <div>

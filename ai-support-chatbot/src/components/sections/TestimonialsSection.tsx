@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import SectionHeader from "@/components/ui/SectionHeader";
@@ -28,12 +29,18 @@ export default function TestimonialsSection() {
   return (
     <section
       id="testimonials"
-      className="py-28 bg-slate-50 dark:bg-slate-900"
+      className="py-20 bg-slate-950"
       aria-labelledby="testimonials-heading"
     >
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 section-card">
 
-        <SectionHeader
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6 }}
+        >
+          <SectionHeader
           badge="Customer Stories"
           title="Loved by modern businesses"
           subtitle="Over 2,500 teams trust AI Business Assistant to generate smart marketing, email, and strategy content every day."
@@ -127,7 +134,7 @@ export default function TestimonialsSection() {
         </div>
 
         {/* ── Mini card grid ─────────────────── */}
-        <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.slice(0, 3).map((item, i) => (
             <div
               key={item.id}
@@ -155,7 +162,7 @@ export default function TestimonialsSection() {
             </div>
           ))}
         </div>
-
+          </motion.div>
       </div>
     </section>
   );

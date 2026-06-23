@@ -39,21 +39,17 @@ export default function SectionHeader({
       )}
       <h2
         className={cn(
-          "font-extrabold leading-[1.1] tracking-tight mb-5",
-          "text-3xl sm:text-4xl lg:text-5xl",
-          light
-            ? "text-white"
-            : "text-slate-900 dark:text-white"
+          "font-extrabold leading-[1.1] tracking-tight mb-5 text-5xl",
+          "bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-500",
+          light ? "text-white" : ""
         )}
       >
         {title}
       </h2>
       <p
         className={cn(
-          "text-base sm:text-lg leading-relaxed",
-          light
-            ? "text-blue-200"
-            : "text-slate-500 dark:text-slate-400"
+          "text-lg leading-relaxed text-slate-400",
+          light ? "text-blue-200" : ""
         )}
       >
         {subtitle}

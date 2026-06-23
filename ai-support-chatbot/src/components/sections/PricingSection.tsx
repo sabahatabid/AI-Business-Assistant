@@ -15,18 +15,19 @@ export default function PricingSection() {
   return (
     <section
       id="pricing"
-      className="py-28 bg-white dark:bg-slate-950"
+      className="py-20 bg-slate-950"
       aria-labelledby="pricing-heading"
     >
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <SectionHeader
-          badge="Pricing"
-          title="Simple, transparent pricing"
-          subtitle="Start free, scale as you grow. No hidden fees, no long-term commitments — just pricing that makes sense for your stage."
-        />
+        <div className="section-card">
+          <SectionHeader
+            badge="Pricing"
+            title="Simple, transparent pricing"
+            subtitle="Start free, scale as you grow. No hidden fees, no long-term commitments — just pricing that makes sense for your stage."
+          />
 
-        {/* ── Billing toggle ─────────────────── */}
+          {/* ── Billing toggle ─────────────────── */}
         <div className="mt-10 flex items-center justify-center gap-3">
           <span className={cn("text-[13px] font-semibold transition-colors", !annual ? "text-slate-900 dark:text-white" : "text-slate-400")}>
             Monthly
@@ -56,7 +57,7 @@ export default function PricingSection() {
         </div>
 
         {/* ── Plan cards ─────────────────────── */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-5 items-stretch">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
           {pricingPlans.map((plan, i) => {
             const isHighlighted = plan.highlighted;
             const displayPrice  =
@@ -73,9 +74,8 @@ export default function PricingSection() {
                   "relative flex flex-col rounded-2xl p-8 transition-all duration-300",
                   isHighlighted
                     ? [
-                        "bg-gradient-to-b from-blue-600 to-indigo-700",
-                        "shadow-2xl shadow-blue-600/30",
-                        "ring-1 ring-blue-500/50",
+                        "bg-slate-900 border border-purple-500",
+                        "shadow-2xl shadow-purple-500/20",
                         "md:-mt-4 md:mb-0",
                       ]
                     : [
@@ -87,8 +87,8 @@ export default function PricingSection() {
               >
                 {/* Popular badge */}
                 {isHighlighted && (
-                  <div className="absolute -top-4 inset-x-0 flex justify-center">
-                    <span className="inline-flex items-center gap-1.5 bg-gradient-to-r from-amber-400 to-orange-400 text-gray-900 text-[11px] font-extrabold px-4 py-1.5 rounded-full shadow-lg">
+                  <div className="absolute -top-3 inset-x-0 flex justify-center">
+                    <span className="inline-flex items-center gap-1.5 bg-purple-500 text-white text-[11px] font-extrabold px-4 py-1.5 rounded-full shadow-lg shadow-purple-500/20">
                       <Zap className="w-3 h-3" />
                       Most Popular
                     </span>
@@ -174,6 +174,7 @@ export default function PricingSection() {
           </button>
         </p>
       </div>
+    </div>
     </section>
   );
 }

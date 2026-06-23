@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { Zap, BookOpen, Globe, TrendingUp, BarChart2, Clock, MessageSquare, LucideIcon, ArrowRight } from "lucide-react";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { features } from "@/data/siteData";
@@ -21,20 +22,27 @@ export default function FeaturesSection() {
   return (
     <section
       id="features"
-      className="py-28 bg-slate-50 dark:bg-slate-900"
+      className="py-20 bg-slate-950"
       aria-labelledby="features-heading"
     >
       {/* top divider */}
-      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-slate-200 dark:via-slate-700 to-transparent" />
+      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
-        <SectionHeader
-          badge="Core Features"
-          title="Built for business teams and modern freelancers"
-          subtitle="Create high-value business content faster with AI-powered planning, marketing, and email writing tools."
-        />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6 }}
+          className="section-card"
+        >
+          <SectionHeader
+            badge="Core Features"
+            title="Built for business teams and modern freelancers"
+            subtitle="Create high-value business content faster with AI-powered planning, marketing, and email writing tools."
+          />
 
-        {/* Grid */}
+          {/* Grid */}
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {features.map((feature, index) => {
             const Icon = iconMap[feature.icon];
@@ -70,7 +78,7 @@ export default function FeaturesSection() {
               <h3 className="text-xl font-bold text-white mb-1.5">
                 Ready to see all features in action?
               </h3>
-              <p className="text-blue-200 text-[14px]">
+              <p className="text-blue-200 text-lg">
                 Start your free 14-day trial — no credit card required.
               </p>
             </div>
@@ -83,7 +91,8 @@ export default function FeaturesSection() {
             </button>
           </div>
         </div>
-      </div>
-    </section>
+      </motion.div>
+    </div>
+  </section>
   );
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { useState } from "react";
 import {
   Mail, Phone, MapPin, Send,
@@ -50,12 +51,18 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="py-28 bg-slate-50 dark:bg-slate-900"
+      className="py-20 bg-slate-950"
       aria-labelledby="contact-heading"
     >
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 section-card">
 
-        <SectionHeader
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6 }}
+        >
+          <SectionHeader
           badge="Get in Touch"
           title="Ready to transform your support?"
           subtitle="Talk to our team — we'll help you pick the right plan and get you live in 24 hours."
@@ -230,6 +237,7 @@ export default function ContactSection() {
           </div>
 
         </div>
+          </motion.div>
       </div>
     </section>
   );

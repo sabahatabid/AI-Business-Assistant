@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { ArrowRight, Play, CheckCircle2, Bot, Sparkles, Star, Shield, Zap } from "lucide-react";
 import Button from "@/components/ui/Button";
 import ChatbotMockup from "@/components/sections/ChatbotMockup";
@@ -22,7 +23,7 @@ export default function HeroSection() {
 
   return (
     <section
-      className="relative min-h-screen flex items-center overflow-hidden bg-white dark:bg-slate-950"
+      className="relative min-h-screen flex items-center overflow-hidden bg-slate-950"
       aria-label="Hero"
     >
       {/* ── Background mesh ──────────────────── */}
@@ -43,11 +44,16 @@ export default function HeroSection() {
         <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 pt-28 pb-20 lg:pt-32 lg:pb-24 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-12 xl:gap-20 items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full section-card">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-8 items-center">
 
           {/* ── Left: Text ────────────────────── */}
-          <div className="max-w-xl lg:max-w-none">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-xl lg:max-w-none section-card"
+          >
 
             {/* Social proof pill */}
             <div className="inline-flex items-center gap-3 bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 rounded-full pl-1.5 pr-4 py-1.5 mb-8 shadow-sm">
@@ -72,11 +78,11 @@ export default function HeroSection() {
             </div>
 
             {/* Headline */}
-            <h1 className="text-[42px] sm:text-5xl lg:text-6xl xl:text-[68px] font-extrabold tracking-tight leading-[1.05] text-slate-900 dark:text-white mb-6">
+            <h1 className="text-5xl font-bold tracking-tight leading-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500 mb-6">
               AI Business Assistant
             </h1>
 
-            <p className="text-[17px] text-slate-500 dark:text-slate-400 leading-relaxed mb-9 max-w-[560px]">
+            <p className="text-lg text-slate-400 leading-relaxed mb-9 max-w-xl">
               Generate business ideas, marketing plans, emails, and reports instantly using AI. Build proposals, launch strategies, and customer messaging in a polished SaaS-style workflow.
             </p>
 
@@ -101,19 +107,17 @@ export default function HeroSection() {
             </div>
 
             {/* Trust badges */}
-            <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+            <div className="flex flex-wrap items-center gap-3">
               {trustItems.map((item) => (
-                <div key={item} className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
-                  <span className="text-[13px] text-slate-500 dark:text-slate-400 font-medium">
-                    {item}
-                  </span>
+                <div key={item} className="flex items-center gap-2 rounded-full bg-slate-950 border border-slate-800 px-4 py-2 text-sm text-slate-300">
+                  <CheckCircle2 className="w-4 h-4 text-purple-500 shrink-0" />
+                  <span>{item}</span>
                 </div>
               ))}
             </div>
 
             {/* Stats */}
-            <div className="mt-10 pt-8 border-t border-slate-100 dark:border-slate-800 grid grid-cols-3 gap-4">
+            <div className="mt-10 pt-8 border-t border-slate-800 grid grid-cols-1 sm:grid-cols-3 gap-4">
               {heroStats.map(({ value, label }) => (
                 <div key={label}>
                   <div className="text-2xl lg:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
@@ -125,7 +129,7 @@ export default function HeroSection() {
                 </div>
               ))}
             </div>
-          </div>
+          </motion.div>
 
           {/* ── Right: Mockup ──────────────────── */}
           <div className="relative w-full max-w-[520px] mx-auto lg:mx-0 lg:justify-self-end">

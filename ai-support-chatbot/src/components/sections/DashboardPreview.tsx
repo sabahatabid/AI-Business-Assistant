@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import {
   TrendingUp, TrendingDown, MessageSquare,
   CheckCircle, Star, Clock, ArrowUpRight,
@@ -30,7 +31,7 @@ export default function DashboardPreview() {
   return (
     <section
       id="dashboard"
-      className="py-28 relative overflow-hidden bg-slate-950"
+      className="py-20 relative overflow-hidden bg-slate-950"
       aria-labelledby="dashboard-heading"
     >
       {/* background decorations */}
@@ -40,9 +41,15 @@ export default function DashboardPreview() {
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[900px] h-[600px] bg-blue-600/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 section-card">
 
-        <SectionHeader
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6 }}
+        >
+          <SectionHeader
           badge="Analytics Dashboard"
           title="Real-time insights at your fingertips"
           subtitle="Track every conversation, measure satisfaction, and spot trends — all from one powerful dashboard."
@@ -220,7 +227,7 @@ export default function DashboardPreview() {
             </table>
           </div>
         </div>
-
+          </motion.div>
       </div>
     </section>
   );
