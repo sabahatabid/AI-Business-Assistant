@@ -73,60 +73,30 @@ export default function HeroSection() {
 
             {/* Headline */}
             <h1 className="text-[42px] sm:text-5xl lg:text-6xl xl:text-[68px] font-extrabold tracking-tight leading-[1.05] text-slate-900 dark:text-white mb-6">
-              AI Customer{" "}
-              <span className="relative inline-block">
-                <span className="gradient-text">Support</span>
-                <svg
-                  className="absolute -bottom-1.5 left-0 w-full"
-                  viewBox="0 0 240 8"
-                  fill="none"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M2 6C50 2 100 1 140 3C180 5 210 6 238 5"
-                    stroke="url(#heroLine)"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                  />
-                  <defs>
-                    <linearGradient id="heroLine" x1="0" y1="0" x2="240" y2="0">
-                      <stop offset="0%" stopColor="#3b82f6" />
-                      <stop offset="100%" stopColor="#8b5cf6" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-              </span>{" "}
-              That Works{" "}
-              <span className="gradient-text">24/7</span>
+              AI Business Assistant
             </h1>
 
-            <p className="text-[17px] text-slate-500 dark:text-slate-400 leading-relaxed mb-9 max-w-[520px]">
-              Deploy an intelligent AI assistant in minutes. Handle thousands of
-              customer queries instantly, resolve tickets automatically, and
-              delight customers — while you focus on growth.
+            <p className="text-[17px] text-slate-500 dark:text-slate-400 leading-relaxed mb-9 max-w-[560px]">
+              Generate business ideas, marketing plans, emails, and reports instantly using AI. Build proposals, launch strategies, and customer messaging in a polished SaaS-style workflow.
             </p>
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-3 mb-9">
               <Button
                 size="xl"
-                onClick={() => scrollTo("#pricing")}
+                onClick={() => scrollTo("#demo")}
                 className="group !rounded-2xl shadow-xl shadow-blue-500/25 hover:shadow-2xl hover:shadow-blue-500/30"
               >
-                <Sparkles className="w-[18px] h-[18px] group-hover:rotate-12 transition-transform" />
-                Start for free
+                Try Demo
                 <ArrowRight className="w-[18px] h-[18px] group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button
                 variant="secondary"
                 size="xl"
-                onClick={() => scrollTo("#demo")}
+                onClick={() => scrollTo("#features")}
                 className="group !rounded-2xl"
               >
-                <div className="w-7 h-7 bg-blue-100 dark:bg-blue-900/40 rounded-full flex items-center justify-center group-hover:bg-blue-200 transition-colors">
-                  <Play className="w-3 h-3 fill-blue-600 text-blue-600 ml-0.5" />
-                </div>
-                See it in action
+                View Features
               </Button>
             </div>
 

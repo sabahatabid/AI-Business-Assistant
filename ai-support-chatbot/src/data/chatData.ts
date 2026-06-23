@@ -1,29 +1,34 @@
 export const faqQuestions = [
-  "How do I reset my password?",
-  "What's your refund policy?",
-  "How to upgrade my plan?",
-  "Track my order status",
-  "Cancel subscription",
-  "Contact human agent",
+  "Write a marketing plan for a hijab brand",
+  "Generate business ideas for a clothing store",
+  "Write a professional customer reply email",
+  "Create a launch strategy for a digital service",
+  "Draft a sales pitch for a design agency",
+  "Summarize a business report for investors",
 ];
 
 export const aiResponses: Record<string, string> = {
-  "How do I reset my password?":
-    "To reset your password, click on 'Forgot Password' on the login page. Enter your email address and we'll send you a reset link within 2 minutes. The link is valid for 24 hours. If you don't receive the email, check your spam folder or contact support.",
-  "What's your refund policy?":
-    "We offer a 30-day money-back guarantee on all plans. If you're not satisfied for any reason, simply contact our support team within 30 days of purchase for a full refund. No questions asked! Refunds are processed within 5-7 business days.",
-  "How to upgrade my plan?":
-    "Upgrading is easy! Go to your Account Settings → Billing → Choose Plan. Your new features activate instantly and you'll be billed the prorated difference. All your existing data and conversations are preserved during the upgrade.",
-  "Track my order status":
-    "To track your order, visit the Orders section in your dashboard or use the tracking number sent to your email. You can also reply here with your order ID and I'll look it up for you right now!",
-  "Cancel subscription":
-    "I understand you'd like to cancel. Before I proceed, may I ask what's not working for you? If it's a technical issue, I can connect you with our technical team to resolve it. If you'd like to proceed with cancellation, please go to Account Settings → Billing → Cancel Subscription.",
-  "Contact human agent":
-    "Connecting you with a human agent now. Average wait time is 2 minutes. While you wait, is there anything else I can help you with? Our agents are available 24/7.",
+  "Write a marketing plan for a hijab brand":
+    "### Hijab Brand Marketing Plan\n\n**Objective:** Build trust with modern modest fashion buyers and drive repeat sales.\n\n- Target social audiences with styled outfit guides and customer stories.\n- Launch with a limited-edition collection supported by influencer partnerships.\n- Offer a VIP discount for first-time buyers and referrals.\n\n**Channels:**\n- Instagram + TikTok visual campaigns.\n- Email sequences with seasonal styling tips.\n- Blog content focused on comfort, elegance, and community.",
+
+  "Generate business ideas for a clothing store":
+    "### Clothing Store Growth Ideas\n\n**Core concepts:**\n- Launch a curated capsule collection for new seasonal trends.\n- Introduce a subscription box with monthly styling picks.\n- Offer virtual styling sessions for loyal customers.\n\n**Revenue boosters:**\n- Upsell coordinating accessories at checkout.\n- Create limited-time bundles for holidays and events.\n- Run flash sales for abandoned carts.\n\n**Marketing tactics:**\n- Use user-generated content to build social proof.\n- Partner with micro-influencers for local reach.\n- Promote store events and exclusive previews to mailing list subscribers.",
+
+  "Write a professional customer reply email":
+    "### Professional Customer Reply\n\nDear [Customer Name],\n\nThank you for reaching out to us. We appreciate your patience while we reviewed your request.\n\n**What we found:**\n- Your order is currently being processed.\n- The expected delivery date is [date].\n\n**Next steps:**\n- We will update you immediately if there is any change.\n- If you have additional questions, feel free to reply to this email.\n\nBest regards,\nAI Business Assistant Team",
+
+  "Create a launch strategy for a digital service":
+    "### Digital Service Launch Strategy\n\n**Goal:** Drive awareness, acquire early customers, and collect feedback quickly.\n\n- Publish a landing page with clear benefits and social proof.\n- Run targeted ads to your ideal customer segments.\n- Offer an early adopter discount or free trial.\n\n**Launch checklist:**\n- Share product demos with key partners.\n- Email your audience with a launch invitation.\n- Collect customer testimonials after first use.",
+
+  "Draft a sales pitch for a design agency":
+    "### Design Agency Sales Pitch\n\n**Introduction:** We help brands stand out with premium design and conversion-focused marketing materials.\n\n**Why choose us:**\n- Proven results with modern SaaS and lifestyle brands.\n- Fast, collaborative delivery and clear timelines.\n- Strategic thinking that turns creative ideas into measurable growth.\n\n**Call to action:**\n- Let’s schedule a brief discovery call to review your goals and share concepts.",
+
+  "Summarize a business report for investors":
+    "### Investor Report Summary\n\n**Highlight:** Strong growth momentum and a clear path to profitability.\n\n- Revenue increased by 32% over the last quarter.\n- Customer retention is at 88%, with repeat purchases growing steadily.\n- Operational costs were optimized through automation.\n\n**Outlook:**\n- Expand into new markets with a scalable growth plan.\n- Invest in product development and customer success.\n- Maintain discipline on cash flow while driving expansion.",
 };
 
 export const defaultResponse =
-  "Thank you for your message! I'm here to help. Could you provide more details about your issue so I can assist you better? You can also select one of the quick action buttons below for faster help.";
+  "Thank you for your message! I'm here to help with business ideas, marketing plans, emails, and reports. Choose one of the example prompts below or type your own request.";
 
 export const welcomeMessage =
-  "👋 Hi there! I'm SupportAI, your intelligent customer assistant. I can help you with account issues, billing questions, technical support, and much more. How can I help you today?";
+  "👋 Hi! I'm AI Business Assistant. I generate business ideas, marketing plans, professional emails, and reports instantly. Use one of the example prompts to get started.";

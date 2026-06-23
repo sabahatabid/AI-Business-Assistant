@@ -52,7 +52,7 @@ export default function ChatbotMockup() {
                 <span className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-emerald-400 rounded-full border-2 border-blue-600" />
               </div>
               <div>
-                <p className="text-white font-semibold text-[13px] leading-tight">SupportAI</p>
+                <p className="text-white font-semibold text-[13px] leading-tight">AI Business Assistant</p>
                 <p className="text-blue-200 text-[11px]">Always online · AI-powered</p>
               </div>
             </div>
@@ -145,7 +145,7 @@ export default function ChatbotMockup() {
             </button>
           </div>
           <p className="text-center text-[10px] text-slate-400 mt-2">
-            Powered by <span className="font-semibold text-blue-500">SupportAI</span> · End-to-end encrypted
+            Powered by <span className="font-semibold text-blue-500">AI Business Assistant</span> · End-to-end encrypted
           </p>
         </div>
       </div>

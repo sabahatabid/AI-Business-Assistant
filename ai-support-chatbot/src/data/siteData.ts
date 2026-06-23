@@ -12,45 +12,31 @@ export const navItems: NavItem[] = [
 export const features: Feature[] = [
   {
     icon: "Zap",
-    title: "Instant Responses",
+    title: "Instant AI Responses",
     description:
-      "Respond to customer queries in milliseconds. No more wait times — AI handles thousands of conversations simultaneously with perfect accuracy.",
+      "Generate ready-to-use business content instantly — from marketing plans to customer messaging — with one click.",
     color: "from-yellow-400 to-orange-500",
   },
   {
-    icon: "BookOpen",
-    title: "FAQ Automation",
+    icon: "TrendingUp",
+    title: "Business Strategy Generator",
     description:
-      "Automatically train your chatbot on your knowledge base. It learns from every interaction and continuously improves its response accuracy.",
+      "Build clear growth plans, launch strategies, and product positioning documents with AI-powered structure and insight.",
+    color: "from-violet-500 to-purple-600",
+  },
+  {
+    icon: "BookOpen",
+    title: "Marketing Ideas Creator",
+    description:
+      "Create fresh campaign ideas, content plans, and promotional roadmaps tailored to your brand and audience.",
     color: "from-blue-400 to-cyan-500",
   },
   {
-    icon: "Globe",
-    title: "Multi-language Support",
+    icon: "MessageSquare",
+    title: "Professional Email Writer",
     description:
-      "Support customers in 50+ languages. The AI automatically detects the language and responds accordingly, breaking global barriers.",
+      "Draft polished customer replies, sales outreach, and client communications with a professional tone every time.",
     color: "from-green-400 to-emerald-500",
-  },
-  {
-    icon: "TrendingUp",
-    title: "Lead Generation",
-    description:
-      "Qualify and capture leads 24/7. Your AI assistant identifies potential customers, collects contact information, and nurtures them through your funnel.",
-    color: "from-purple-400 to-violet-500",
-  },
-  {
-    icon: "BarChart2",
-    title: "Customer Analytics",
-    description:
-      "Gain deep insights into customer behavior. Track satisfaction scores, common issues, peak hours, and response effectiveness in real-time.",
-    color: "from-pink-400 to-rose-500",
-  },
-  {
-    icon: "Clock",
-    title: "24/7 Availability",
-    description:
-      "Never miss a customer query. Your AI support team works around the clock, every day of the year, with zero downtime and consistent quality.",
-    color: "from-indigo-400 to-blue-500",
   },
 ];
 
@@ -120,7 +106,7 @@ export const testimonials: Testimonial[] = [
     company: "TechFlow Inc.",
     avatar: "SC",
     content:
-      "SupportAI transformed our customer service operations completely. We went from a 4-hour average response time to under 1 second. Our CSAT scores jumped from 72% to 96% in just two months.",
+      "AI Business Assistant transformed our business planning process completely. We went from a 4-hour content cycle to instant strategy drafts. Our team can now deliver polished plans in minutes.",
     rating: 5,
   },
   {
@@ -130,7 +116,7 @@ export const testimonials: Testimonial[] = [
     company: "Velocity Labs",
     avatar: "MR",
     content:
-      "The integration was seamless and the AI learned our product inside out within days. We've reduced support costs by 65% while handling 3x more conversations. It's genuinely impressive.",
+      "The integration was seamless and the AI learned our product inside out within days. We've reduced content production time by 65% while handling 3x more marketing requests. It's genuinely impressive.",
     rating: 5,
   },
   {
@@ -140,7 +126,7 @@ export const testimonials: Testimonial[] = [
     company: "Nexus Commerce",
     avatar: "EW",
     content:
-      "What sold me was the multi-language support. We operate in 12 countries and SupportAI handles all our customers flawlessly. The analytics dashboard gives us insights we never had before.",
+      "What sold me was the AI's ability to generate launch messaging and campaign ideas for multiple markets. We operate in 12 countries and the tool handles every brief flawlessly.",
     rating: 5,
   },
   {
@@ -150,7 +136,7 @@ export const testimonials: Testimonial[] = [
     company: "StartupBase",
     avatar: "DK",
     content:
-      "As a startup, we couldn't afford a large support team. SupportAI lets us punch above our weight. Our enterprise clients think we have a 50-person support team. It's our secret weapon.",
+      "As a startup, we couldn't afford a full creative team. AI Business Assistant lets us punch above our weight. Our investors are impressed with our polished go-to-market materials.",
     rating: 5,
   },
   {
@@ -170,7 +156,7 @@ export const testimonials: Testimonial[] = [
     company: "DataBridge",
     avatar: "JO",
     content:
-      "We evaluated 5 AI support platforms. SupportAI won on every metric — accuracy, speed, integrations, and pricing. The onboarding team was exceptional and we were live in 48 hours.",
+      "We evaluated 5 business AI platforms. AI Business Assistant won on every metric — accuracy, speed, integrations, and pricing. The onboarding team was exceptional and we were live in 48 hours.",
     rating: 5,
   },
 ];

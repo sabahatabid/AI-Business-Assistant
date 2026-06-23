@@ -1,7 +1,7 @@
 import { Bot, Link2, GitBranch, Mail, Phone, MapPin, Share2 } from "lucide-react";
 
 const footerLinks = {
-  Product:   ["Features", "Pricing", "Demo", "Changelog", "Roadmap"],
+  Product:   ["Features", "Pricing", "Demo", "Roadmap", "Use Cases"],
   Company:   ["About", "Blog", "Careers", "Press", "Partners"],
   Resources: ["Documentation", "API Reference", "Help Center", "Community", "Status"],
   Legal:     ["Privacy Policy", "Terms of Service", "Cookie Policy", "GDPR", "Security"],
@@ -14,7 +14,7 @@ const socials = [
 ];
 
 const contacts = [
-  { icon: Mail,   value: "hello@supportai.io" },
+  { icon: Mail,   value: "hello@aibusinessassistant.io" },
   { icon: Phone,  value: "+1 (555) 123-4567" },
   { icon: MapPin, value: "San Francisco, CA 94105" },
 ];
@@ -38,12 +38,12 @@ export default function Footer() {
                 <Bot className="w-4 h-4 text-white" strokeWidth={2.5} />
               </div>
               <span className="text-[17px] font-bold tracking-tight text-white">
-                Support<span className="text-blue-400">AI</span>
+                AI Business<span className="text-blue-400">Assistant</span>
               </span>
             </div>
 
             <p className="text-[13px] leading-relaxed text-slate-400 max-w-xs">
-              The most advanced AI customer support platform. Automate support, delight customers, and grow faster.
+              A polished AI SaaS portfolio experience for business ideas, marketing plans, professional emails, and reports.
             </p>
 
             <ul className="space-y-2.5">
@@ -94,7 +94,7 @@ export default function Footer() {
         {/* ── Bottom bar ─────────────────────── */}
         <div className="py-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[12px] text-slate-500">
-            © {new Date().getFullYear()} SupportAI, Inc. All rights reserved.
+            Built with Next.js + AI API | Portfolio Project
           </p>
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />

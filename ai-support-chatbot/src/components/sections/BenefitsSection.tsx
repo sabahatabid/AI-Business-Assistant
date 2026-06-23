@@ -32,7 +32,7 @@ export default function BenefitsSection() {
               Measurable results from day one
             </h2>
             <p className="text-[16px] text-slate-500 dark:text-slate-400 leading-relaxed mb-10 max-w-md">
-              Real numbers from real customers. SupportAI delivers outcomes you can see in your dashboard the week you go live.
+              Real numbers from real customers. AI Business Assistant delivers measurable results and polished business content from day one.
             </p>
 
             <div className="space-y-3">

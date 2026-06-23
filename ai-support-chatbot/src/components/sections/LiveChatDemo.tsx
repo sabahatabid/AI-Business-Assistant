@@ -7,13 +7,70 @@ import { faqQuestions, aiResponses, defaultResponse, welcomeMessage } from "@/da
 import type { Message } from "@/types";
 
 const capabilities = [
-  "Understands natural language",
-  "Remembers conversation context",
-  "Learns from every interaction",
-  "Escalates to humans when needed",
-  "Works in 50+ languages",
-  "Integrates with your systems",
+  "Generates business strategy content",
+  "Creates polished marketing plans",
+  "Writes professional customer emails",
+  "Delivers structured AI outputs",
+  "Supports responsive mobile workflows",
+  "Includes polished SaaS visuals",
 ];
+
+function formatAssistantContent(content: string) {
+  const blocks: Array<{ type: "heading" | "list" | "paragraph"; text?: string; items?: string[] }> = [];
+  const lines = content.split("\n");
+  let currentList: string[] = [];
+
+  const flushList = () => {
+    if (currentList.length) {
+      blocks.push({ type: "list", items: currentList });
+      currentList = [];
+    }
+  };
+
+  for (const rawLine of lines) {
+    const line = rawLine.trim();
+    if (!line) {
+      flushList();
+      continue;
+    }
+    if (line.startsWith("### ")) {
+      flushList();
+      blocks.push({ type: "heading", text: line.replace("### ", "") });
+      continue;
+    }
+    if (line.startsWith("- ")) {
+      currentList.push(line.replace("- ", ""));
+      continue;
+    }
+    flushList();
+    blocks.push({ type: "paragraph", text: line });
+  }
+
+  flushList();
+  return blocks.map((block, index) => {
+    if (block.type === "heading") {
+      return (
+        <h4 key={index} className="text-sm font-semibold text-slate-900 dark:text-slate-100 mt-3 mb-2">
+          {block.text}
+        </h4>
+      );
+    }
+    if (block.type === "list") {
+      return (
+        <ul key={index} className="list-disc ml-5 space-y-1 text-[14px] text-slate-700 dark:text-slate-300">
+          {block.items?.map((item, itemIndex) => (
+            <li key={itemIndex}>{item}</li>
+          ))}
+        </ul>
+      );
+    }
+    return (
+      <p key={index} className="text-[14px] text-slate-700 dark:text-slate-300 leading-relaxed mt-2">
+        {block.text}
+      </p>
+    );
+  });
+}
 
 export default function LiveChatDemo() {
   const [messages, setMessages] = useState<Message[]>([
@@ -41,13 +98,11 @@ export default function LiveChatDemo() {
     setInput("");
     setIsTyping(true);
 
-    await new Promise(r => setTimeout(r, 800 + Math.random() * 600));
+    await new Promise(r => setTimeout(r, 900 + Math.random() * 700));
 
     const reply =
       aiResponses[text.trim()] ??
-      (/^hi|hello|hey/i.test(text)
-        ? "Hey there! Great to connect. I can help with account issues, billing, orders, technical questions, and more. What do you need?"
-        : defaultResponse);
+      defaultResponse;
 
     setMessages(prev => [...prev, {
       id: (Date.now() + 1).toString(),
@@ -77,8 +132,8 @@ export default function LiveChatDemo() {
 
         <SectionHeader
           badge="Live Demo"
-          title="Experience AI support firsthand"
-          subtitle="Talk to our AI assistant right now — it handles real queries exactly as it would for your customers."
+          title="Try the AI business assistant"
+          subtitle="Use example prompts to generate marketing plans, business ideas, emails, and reports in real time."
         />
 
         <div className="mt-14 grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
@@ -98,7 +153,7 @@ export default function LiveChatDemo() {
                     <span className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-emerald-400 rounded-full border-2 border-blue-600" />
                   </div>
                   <div>
-                    <p className="text-white font-bold text-[14px]">SupportAI Assistant</p>
+                    <p className="text-white font-bold text-[14px]">AI Business Assistant</p>
                     <div className="flex items-center gap-1.5 mt-0.5">
                       <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full" />
                       <span className="text-blue-200 text-[11px]">Online · AI-powered</span>
@@ -142,7 +197,7 @@ export default function LiveChatDemo() {
                           ? "bg-blue-600 text-white rounded-br-sm shadow-sm shadow-blue-600/20"
                           : "bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 rounded-bl-sm shadow-sm border border-slate-100 dark:border-slate-700"
                       }`}>
-                        {msg.content}
+                        {msg.role === "assistant" ? formatAssistantContent(msg.content) : msg.content}
                       </div>
                       <p className={`text-[10px] mt-1 text-slate-400 ${msg.role === "user" ? "text-right" : ""}`}>
                         {fmt(msg.timestamp)}
@@ -152,15 +207,20 @@ export default function LiveChatDemo() {
                 ))}
 
                 {isTyping && (
-                  <div className="flex items-end gap-2.5" role="status" aria-label="AI is typing">
+                  <div className="flex items-end gap-2.5" role="status" aria-label="AI is generating a response">
                     <div className="w-7 h-7 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-md shadow-blue-500/25">
                       <Bot className="w-3.5 h-3.5 text-white" strokeWidth={2} />
                     </div>
                     <div className="bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl rounded-bl-sm px-4 py-3 shadow-sm">
-                      <div className="flex items-center gap-1.5">
-                        <span className="typing-dot w-2 h-2 bg-blue-500 rounded-full" />
-                        <span className="typing-dot w-2 h-2 bg-blue-500 rounded-full" />
-                        <span className="typing-dot w-2 h-2 bg-blue-500 rounded-full" />
+                      <div className="flex items-center gap-3">
+                        <span className="text-[12px] uppercase tracking-[0.16em] text-slate-500 dark:text-slate-400 font-bold">
+                          Thinking...
+                        </span>
+                        <div className="flex items-center gap-1">
+                          <span className="typing-dot w-2 h-2 bg-blue-500 rounded-full" />
+                          <span className="typing-dot w-2 h-2 bg-blue-500 rounded-full" />
+                          <span className="typing-dot w-2 h-2 bg-blue-500 rounded-full" />
+                        </div>
                       </div>
                     </div>
                   </div>

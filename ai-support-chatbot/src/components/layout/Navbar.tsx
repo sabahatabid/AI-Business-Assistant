@@ -43,7 +43,7 @@ export default function Navbar() {
             href="#"
             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
             className="flex items-center gap-2.5 group shrink-0"
-            aria-label="SupportAI Home"
+            aria-label="AI Business Assistant Home"
           >
             <div className="relative w-8 h-8 flex items-center justify-center">
               <div className="absolute inset-0 bg-blue-600 rounded-xl rotate-3 group-hover:rotate-6 transition-transform" />
@@ -52,7 +52,7 @@ export default function Navbar() {
               </div>
             </div>
             <span className="text-[17px] font-bold tracking-tight text-slate-900 dark:text-white">
-              Support<span className="text-blue-600">AI</span>
+              AI Business<span className="text-blue-600">Assistant</span>
             </span>
           </a>
 
@@ -88,14 +88,14 @@ export default function Navbar() {
                 onClick={() => scrollTo("#demo")}
                 className="px-4 py-2 text-[13.5px] font-semibold text-slate-700 dark:text-slate-200 hover:text-blue-600 transition-colors"
               >
-                Sign in
+                Try Demo
               </button>
               <Button
                 size="sm"
-                onClick={() => scrollTo("#pricing")}
+                onClick={() => scrollTo("#features")}
                 className="!rounded-xl text-[13px] font-semibold shadow-blue-500/20 shadow-lg"
               >
-                Start free trial
+                View Features
               </Button>
             </div>
 
@@ -133,10 +133,10 @@ export default function Navbar() {
           ))}
           <div className="pt-3 mt-2 border-t border-slate-100 dark:border-slate-800 flex flex-col gap-2">
             <Button variant="secondary" size="sm" className="w-full justify-center">
-              Sign in
+              Try Demo
             </Button>
             <Button size="sm" className="w-full justify-center">
-              Start free trial
+              View Features
             </Button>
           </div>
         </div>

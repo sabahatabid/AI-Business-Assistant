@@ -35,8 +35,8 @@ export default function TestimonialsSection() {
 
         <SectionHeader
           badge="Customer Stories"
-          title="Loved by teams worldwide"
-          subtitle="Over 2,500 businesses trust SupportAI to handle their customer conversations every single day."
+          title="Loved by modern businesses"
+          subtitle="Over 2,500 teams trust AI Business Assistant to generate smart marketing, email, and strategy content every day."
         />
 
         {/* ── Logo strip ─────────────────────── */}

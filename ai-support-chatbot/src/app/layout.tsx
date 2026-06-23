@@ -3,28 +3,29 @@ import "./globals.css";
 import { ThemeProvider } from "@/context/ThemeContext";
 
 export const metadata: Metadata = {
-  title: "SupportAI — AI Customer Support That Works 24/7",
+  title: "AI Business Assistant — Generate Business Ideas, Marketing Plans, Emails and Reports",
   description:
-    "Deploy an intelligent AI assistant that handles customer queries instantly, resolves tickets automatically, and delights customers around the clock. Start your free trial today.",
+    "AI Business Assistant is a modern SaaS portfolio app for generating business ideas, marketing plans, emails, and reports instantly using AI.",
   keywords: [
-    "AI customer support",
-    "chatbot",
-    "customer service automation",
-    "helpdesk AI",
-    "24/7 support",
+    "AI business assistant",
+    "business ideas",
+    "marketing plan generator",
+    "email writer",
+    "AI SaaS portfolio",
+    "Next.js AI demo",
   ],
-  authors: [{ name: "SupportAI" }],
+  authors: [{ name: "AI Business Assistant" }],
   openGraph: {
-    title: "SupportAI — AI Customer Support That Works 24/7",
+    title: "AI Business Assistant — AI-Powered Business Planning for Modern Brands",
     description:
-      "Automate customer support with AI. Handle thousands of queries instantly, improve satisfaction scores, and reduce costs by 60%.",
+      "Generate business ideas, marketing plans, emails, and reports instantly with AI. Perfect for portfolio presentations and SaaS showcases.",
     type: "website",
-    url: "https://supportai.io",
+    url: "https://aibusinessassistant.example",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SupportAI — AI Customer Support That Works 24/7",
-    description: "Automate customer support with AI. Start free today.",
+    title: "AI Business Assistant — AI Business SaaS Portfolio",
+    description: "Generate business prompts for business ideas, marketing plans, and email writing instantly.",
   },
   robots: {
     index: true,

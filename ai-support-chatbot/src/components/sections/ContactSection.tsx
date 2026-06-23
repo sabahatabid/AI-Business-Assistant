@@ -15,7 +15,7 @@ interface FormData {
 const empty: FormData = { name:"", email:"", company:"", phone:"", subject:"", message:"" };
 
 const contactInfo = [
-  { icon: Mail,   title: "Email",  sub: "Response within 2 hours",  value: "hello@supportai.io",     grad: "from-blue-500 to-blue-600" },
+  { icon: Mail,   title: "Email",  sub: "Response within 2 hours",  value: "hello@aibusinessassistant.io",     grad: "from-blue-500 to-blue-600" },
   { icon: Phone,  title: "Phone",  sub: "Mon–Fri · 9am–6pm PST",    value: "+1 (555) 123-4567",      grad: "from-indigo-500 to-purple-600" },
   { icon: MapPin, title: "Office", sub: "Headquarters",              value: "San Francisco, CA 94105",grad: "from-emerald-500 to-teal-600" },
 ];
